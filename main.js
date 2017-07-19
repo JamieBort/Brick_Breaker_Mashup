@@ -10,8 +10,8 @@ let paddleWidth = 75;
 let paddleX = (canvas.width - paddleWidth) / 2;
 let rightPressed = false;
 let leftPressed = false;
-let brickRowCount = 5;
-let brickColumnCount = 3;
+let brickRowCount = 9;
+let brickColumnCount = 6;
 let brickWidth = 75;
 let brickHeight = 20;
 let brickPadding = 10;
@@ -61,7 +61,7 @@ function collisionDetection() {
           b.status = 0;
           score++;
           if (score == brickRowCount * brickColumnCount) {
-            alert("YOU WIN, CONGRATS!");
+            alert("CONGRATS!!! YOU WIN!");
             document.location.reload();
           }
         }
@@ -73,7 +73,7 @@ function collisionDetection() {
 function drawBall() {
   ctx.beginPath();
   ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "red";
   ctx.fill();
   ctx.closePath();
 }
@@ -81,7 +81,7 @@ function drawBall() {
 function drawPaddle() {
   ctx.beginPath();
   ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "black";
   ctx.fill();
   ctx.closePath();
 }
@@ -96,7 +96,7 @@ function drawBricks() {
         bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        ctx.fillStyle = "#0095DD";
+        ctx.fillStyle = "forestgreen";
         ctx.fill();
         ctx.closePath();
       }
@@ -105,7 +105,7 @@ function drawBricks() {
 }
 
 function drawScore() {
-  ctx.font = "16px Arial";
+  ctx.font = "1em";
   ctx.fillStyle = "#0095DD";
   ctx.fillText("Score: " + score, 8, 20);
 }
@@ -127,7 +127,7 @@ function draw() {
     if (x > paddleX && x < paddleX + paddleWidth) {
       dy = -dy;
     } else {
-      alert("GAME OVER");
+      alert("DUDE.... YOU SUCK AT THIS GAME");
       document.location.reload();
     }
   }
