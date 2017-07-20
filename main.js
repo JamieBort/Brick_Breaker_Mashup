@@ -18,6 +18,9 @@ let brickPadding = 10;
 let brickOffsetTop = 30;
 let brickOffsetLeft = 30;
 let score = 0;
+let hit;
+
+
 
 let bricks = [];
 for (c = 0; c < brickColumnCount; c++) {
@@ -35,6 +38,8 @@ for (c = 0; c < brickColumnCount; c++) {
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
+
+
 function keyDownHandler(e) {
   if (e.keyCode == 39) {
     rightPressed = true;
@@ -51,17 +56,29 @@ function keyUpHandler(e) {
   }
 }
 
+function func1(){
+document.all.sound.src = "audio/What Is Love 8 Bit Universe.mp3"
+}
+window.onload=func1;
+
 function collisionDetection() {
   for (c = 0; c < brickColumnCount; c++) {
     for (r = 0; r < brickRowCount; r++) {
+
       let b = bricks[c][r];
       if (b.status == 1) {
         if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
           dy = -dy;
+
           b.status = 0;
+
           score++;
+
+
           if (score == brickRowCount * brickColumnCount) {
+
             alert("YOU WIN, CONGRATS!");
+            hit.play();
             document.location.reload();
           }
         }
@@ -118,6 +135,8 @@ function draw() {
   drawScore();
   collisionDetection();
 
+
+
   if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
     dx = -dx;
   }
@@ -126,8 +145,9 @@ function draw() {
   } else if (y + dy > canvas.height - ballRadius) {
     if (x > paddleX && x < paddleX + paddleWidth) {
       dy = -dy;
+      hit.play();
     } else {
-      alert("GAME OVER");
+      // alert("GAME OVER");
       document.location.reload();
     }
   }
@@ -141,5 +161,6 @@ function draw() {
   x += dx;
   y += dy;
 }
+
 
 setInterval(draw, 10);
