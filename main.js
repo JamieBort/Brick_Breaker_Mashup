@@ -61,7 +61,7 @@ function collisionDetection() {
           b.status = 0;
           score++;
           if (score == brickRowCount * brickColumnCount) {
-            alert("CONGRATS!!! YOU WIN!");
+            alert('CHUCK NORIS SAYS GOOD JOB!');
             document.location.reload();
           }
         }
@@ -81,7 +81,7 @@ function drawBall() {
 function drawPaddle() {
   ctx.beginPath();
   ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "yellow";
   ctx.fill();
   ctx.closePath();
 }
@@ -106,7 +106,7 @@ function drawBricks() {
 
 function drawScore() {
   ctx.font = "1em";
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "lightblue";
   ctx.fillText("Score: " + score, 8, 20);
 }
 
@@ -127,8 +127,8 @@ function draw() {
     if (x > paddleX && x < paddleX + paddleWidth) {
       dy = -dy;
     } else {
-      alert("DUDE.... YOU SUCK AT THIS GAME");
-      document.location.reload();
+      alert("HIT THE TOTAL GYM.. YOU NEED PRACTICE!!");
+      document.location.reload(1);
     }
   }
 
