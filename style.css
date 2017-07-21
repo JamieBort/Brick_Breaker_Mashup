@@ -1,1 +1,6 @@
-canvas { background-image: url(http://cdn.business2community.com/wp-content/uploads/2016/03/Vd3MJo.jpg); }
+canvas {
+  background-image: url(http://cdn.business2community.com/wp-content/uploads/2016/03/Vd3MJo.jpg);
+  margin-top: 20px;
+  margin-left: 150px;
+  padding-bottom: 15px;
+ }
