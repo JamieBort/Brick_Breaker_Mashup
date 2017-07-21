@@ -1,18 +1,12 @@
+
 body{
   background-color: #ff33cc;
 }
 
 
-canvas { background-image: url('http://cdn.business2community.com/wp-content/uploads/2016/03/Vd3MJo.jpg');
-margin-left: 300px;
-
-}
-
-div{
-text-align: center;
-
-}
-
-.submit_container{
-align-items: center;
-}
+canvas {
+  background-image: url(http://cdn.business2community.com/wp-content/uploads/2016/03/Vd3MJo.jpg);
+  margin-top: 20px;
+  margin-left: 150px;
+  padding-bottom: 15px;
+ }
