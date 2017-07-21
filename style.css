@@ -1,5 +1,5 @@
 .coverpage {
-  background- image: url(images/Collapse-Ruin-Wall-Decay-Broken-Brickwork-Brick-2205882.jpg);
+  background-image: url(images/Collapse-Ruin-Wall-Decay-Broken-Brickwork-Brick-2205882.jpg);
   background-size: cover;
   background-position: center;
 
@@ -17,7 +17,7 @@
   display: hidden;
 }
 
-#button {
+.play {
   border: black solid 5px;
   color: red;
   width: 60px;
