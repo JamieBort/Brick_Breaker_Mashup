@@ -62,6 +62,11 @@ document.all.sound.src = "audio/What Is Love 8 Bit Universe.mp3"
 }
 window.onload=func1;
 
+function func2(){
+document.all.sound.src = "Brick_Breaker_Mashup/Brick_Breaker_Mashup/audio/Take On Me.mp3"
+}
+window.onload=func2;
+
 function collisionDetection() {
   for (c = 0; c < brickColumnCount; c++) {
     for (r = 0; r < brickRowCount; r++) {
