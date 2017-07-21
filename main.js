@@ -22,7 +22,6 @@ let hit;
 
 
 
-
 let bricks = [];
 for (c = 0; c < brickColumnCount; c++) {
   bricks[c] = [];
@@ -148,7 +147,7 @@ function draw() {
       hit.play();
     } else {
 
-      alert("HIT THE TOTAL GYM.. YOU NEED PRACTICE!!");
+      // alert("HIT THE TOTAL GYM.. YOU NEED PRACTICE!!");
       document.location.reload(1);
     }
   }
