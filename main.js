@@ -22,6 +22,7 @@ let hit;
 
 
 
+
 let bricks = [];
 for (c = 0; c < brickColumnCount; c++) {
   bricks[c] = [];
